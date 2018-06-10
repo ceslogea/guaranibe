@@ -2,6 +2,7 @@ using Domain;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Models;
+using Newtonsoft.Json;
 using Repository.Context;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,35 @@ namespace XUnitTesstCompany
 {
     public class CompanyDomainTest
     {
+
+        private const string _JSON = @"{
+    'nome': 'BANCO PAN S.A.',
+    'cnpj': '59.285.411/0001-13',
+    'email': 'teste@teste.com',
+    'address': {
+        'uf': 'SP',
+        'bairro': 'BELA VISTA',
+        'logradouro': 'AV PAULISTA',
+        'numero': '1374',
+        'cep': '01.310-100',
+        'complemento': 'ANDAR 16',
+    },
+    'CurrentRootCoinValues': {
+	        'code': 'USD',
+	        'codein': 'BRL',
+	        'name': 'Dólar Comercial',
+	        'high': '3.8478',
+	        'low': '3.7016',
+	        'pctChange': '-5.586',
+	        'open': '0',
+	        'bid': '3.7059',
+	        'ask': '3.7065',
+	        'varBid': '-0.2193',
+	        'timestamp': '1528487940000',
+	        'create_date': '2018-06-08 17:10:03'
+    }
+}";
+
         public CompanyDomainTest()
         {
            
@@ -27,7 +57,6 @@ namespace XUnitTesstCompany
         [Fact]
         public async Task Add()
         {
-            Company newCompany = new Company("Teste", "32893956858", "teste.@teste.com", new Address("Araraquara", "Santana", "Jose Closel", "464", "14804-412", ""));
             DbContextOptions<CompanyContext> options = GetConnectionOptions();
 
             // Run the test against one instance of the context
@@ -35,10 +64,11 @@ namespace XUnitTesstCompany
             {
                 context.Database.EnsureCreated();
                 var service = new CompanyService(context);
-                newCompany = await service.Add(newCompany);
+                var company1 = JsonConvert.DeserializeObject<Company>(_JSON);
+                company1 = await service.Add(company1);
                 List<Company> result = service.GetAll().ToList();
                 Assert.Single(result);
-                Assert.Equal(newCompany.Id, result.Single().Id);
+                Assert.Equal(company1.Id, result.Single().Id);
             }
 
         }
@@ -50,20 +80,21 @@ namespace XUnitTesstCompany
         [Fact]
         public async Task List()
         {
-            DbContextOptions<CompanyContext> options = GetConnectionOptions();
 
+            DbContextOptions<CompanyContext> options = GetConnectionOptions();
 
             using (CompanyContext context = new CompanyContext(options))
             {
                 context.Database.EnsureCreated();
                 var service = new CompanyService(context);
-                Company newCompany = await service.Add(new Company("Teste", "32893956858", "teste.@teste.com", new Address("Araraquara", "Santana", "Jose Closel", "464", "14804-412", "")));
-                Company newCompany2 = await service.Add(new Company("Teste2", "328939568582", "teste.@teste.com", new Address("Araraquara", "Santana", "Jose Closel", "464", "14804-412", "")));
+                var company1 = JsonConvert.DeserializeObject<Company>(_JSON);
+                var company2 = JsonConvert.DeserializeObject<Company>(_JSON);
+                Company newCompany = await service.Add(company1);
+                Company newCompany2 = await service.Add(company2);
                 IEnumerable<Company> result = service.GetAll();
 
                 Assert.NotEmpty(result);
-                Assert.Collection(result, item => Assert.Contains("Teste", item.Name),
-                                item => Assert.Contains("Teste2", item.Name));
+                Assert.Equal(2, result.Count());
             }
         }
 

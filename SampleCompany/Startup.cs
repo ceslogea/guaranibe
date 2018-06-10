@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Repository.Context;
 using SampleCompany.Infra;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace SampleCompany
 {
@@ -27,15 +28,6 @@ namespace SampleCompany
 
         public void ConfigureServices(IServiceCollection services)
         {
-            
-            //services.AddDbContext<CompanyContext>(options =>
-            //{
-            //    SqliteConnection connection = new SqliteConnection("DataSource=:memory:");
-            //    connection.Open();
-            //    options.UseSqlite(connection);
-            //});
-
-
             services.AddOptions();
             services.AddDbContext<CompanyContext>(options =>
                options.UseInMemoryDatabase(databaseName: "WebAppDB")
@@ -47,6 +39,11 @@ namespace SampleCompany
             services.AddMvc();
             // Ativando o uso de cache em memória
             services.AddMemoryCache();
+
+            services.AddSwaggerGen(s =>
+            {
+                s.SwaggerDoc("v1", new Info { Title = "APICompany", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -65,6 +62,12 @@ namespace SampleCompany
 
             app.UseMiddleware(typeof(ErrorHandlingMiddleware));
             app.UseMvc();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(s =>
+            {
+                s.SwaggerEndpoint("/swagger/v1/Swagger.json", "APICompany v1");
+            });
         }
 
         #region Aux
