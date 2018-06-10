@@ -673,11 +673,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Celsogea\\documents\\visual studio 2017\\Projects\\SampleCompany\\Models\\Models.csproj",
+      "projectUniqueName": "C:\\Users\\Celsogea\\Source\\Repos\\guaranibe2\\Models\\Models.csproj",
       "projectName": "Models",
-      "projectPath": "C:\\Users\\Celsogea\\documents\\visual studio 2017\\Projects\\SampleCompany\\Models\\Models.csproj",
+      "projectPath": "C:\\Users\\Celsogea\\Source\\Repos\\guaranibe2\\Models\\Models.csproj",
       "packagesPath": "C:\\Users\\Celsogea\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Celsogea\\documents\\visual studio 2017\\Projects\\SampleCompany\\Models\\obj\\",
+      "outputPath": "C:\\Users\\Celsogea\\Source\\Repos\\guaranibe2\\Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

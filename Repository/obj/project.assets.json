@@ -2965,11 +2965,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Celsogea\\documents\\visual studio 2017\\Projects\\SampleCompany\\Repository\\Repository.csproj",
+      "projectUniqueName": "C:\\Users\\Celsogea\\Source\\Repos\\guaranibe2\\Repository\\Repository.csproj",
       "projectName": "Repository",
-      "projectPath": "C:\\Users\\Celsogea\\documents\\visual studio 2017\\Projects\\SampleCompany\\Repository\\Repository.csproj",
+      "projectPath": "C:\\Users\\Celsogea\\Source\\Repos\\guaranibe2\\Repository\\Repository.csproj",
       "packagesPath": "C:\\Users\\Celsogea\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Celsogea\\documents\\visual studio 2017\\Projects\\SampleCompany\\Repository\\obj\\",
+      "outputPath": "C:\\Users\\Celsogea\\Source\\Repos\\guaranibe2\\Repository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -2988,8 +2988,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\Celsogea\\documents\\visual studio 2017\\Projects\\SampleCompany\\Models\\Models.csproj": {
-              "projectPath": "C:\\Users\\Celsogea\\documents\\visual studio 2017\\Projects\\SampleCompany\\Models\\Models.csproj"
+            "C:\\Users\\Celsogea\\Source\\Repos\\guaranibe2\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\Celsogea\\Source\\Repos\\guaranibe2\\Models\\Models.csproj"
             }
           }
         }
