@@ -45,10 +45,10 @@ namespace Domain
 
         public async Task<IEnumerable<Company>> GetAllNoLazyLoad()
         {
-            var results = _repo.GetAllNoLazyLoad().AsEnumerable();
+            var results = _repo.GetAllNoLazyLoad().ToList();
             foreach (var item in results)
             {
-                var dataBid = new DateTime(int.Parse(item.CurrentRootCoinValues.timestamp));
+                var dataBid = GetDateTimeFromUnixTimeStamp(uint.Parse(item.CurrentRootCoinValues.timestamp));
                 
                 if ((dataBid - DateTime.Now).TotalHours > 20)
                 {
@@ -57,6 +57,11 @@ namespace Domain
                 }
             }
             return results;
+        }
+
+        public DateTime GetDateTimeFromUnixTimeStamp(uint timestamp)
+        {
+            return new DateTime(1970, 1, 1, 0, 0, 0).AddSeconds(timestamp);
         }
     }
 }
