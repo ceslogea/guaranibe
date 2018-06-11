@@ -664,27 +664,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Celsogea\\.nuget\\packages\\": {},
+    "C:\\Users\\celso.bernar\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Celsogea\\Source\\Repos\\guaranibe2\\Models\\Models.csproj",
+      "projectUniqueName": "C:\\Users\\celso.bernar\\Source\\Repos\\guaranibe\\Models\\Models.csproj",
       "projectName": "Models",
-      "projectPath": "C:\\Users\\Celsogea\\Source\\Repos\\guaranibe2\\Models\\Models.csproj",
-      "packagesPath": "C:\\Users\\Celsogea\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Celsogea\\Source\\Repos\\guaranibe2\\Models\\obj\\",
+      "projectPath": "C:\\Users\\celso.bernar\\Source\\Repos\\guaranibe\\Models\\Models.csproj",
+      "packagesPath": "C:\\Users\\celso.bernar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\celso.bernar\\Source\\Repos\\guaranibe\\Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Celsogea\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\celso.bernar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"

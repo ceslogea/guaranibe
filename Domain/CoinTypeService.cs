@@ -15,10 +15,17 @@ namespace Domain
         private static HttpClient client = new HttpClient();
         private const string URL_AUCTION = @"https://economia.awesomeapi.com.br/all";
         private ICoinRepo _repo;
+        private RootCoin _coins;
 
         public CoinTypeService(CompanyContext context)
         {
             _repo = new CoinRepo(context);
+        }
+
+        public async Task<RootCoin> GetCoins()
+        {
+            await Get();
+            return _coins;
         }
 
         public async Task<string> Get()
@@ -29,8 +36,8 @@ namespace Domain
                 if (response.IsSuccessStatusCode)
                 {
                     var result = await response.Content.ReadAsStringAsync();
-                    var coins = JsonConvert.DeserializeObject<RootCoin>(result);
-                    await _repo.Create(coins);
+                    _coins = JsonConvert.DeserializeObject<RootCoin>(result);
+                    await _repo.Create(_coins);
                     //throw new Exception("teste");
                     return result;
                 }

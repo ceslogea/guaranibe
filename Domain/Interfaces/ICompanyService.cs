@@ -11,6 +11,6 @@ namespace Domain
         Task<Company> Add(Company newCompany);
         IEnumerable<Company> GetAll();
         Company GetNoLazyLoad(string id);
-        IEnumerable<Company> GetAllNoLazyLoad();
+        Task<IEnumerable<Company>> GetAllNoLazyLoad();
     }
 }

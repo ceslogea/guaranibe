@@ -1,4 +1,7 @@
-﻿using Models;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Models;
+using Newtonsoft.Json;
 using Repository;
 using Repository.Context;
 using Repository.Repos;
@@ -11,10 +14,13 @@ namespace Domain
 {
     public class CompanyService : ICompanyService
     {
+        private ICoinTypeSerrvice _coinService;
         private ICompanyRepo _repo;
+        public IConfiguration Configuration { get; }
 
-        public CompanyService(CompanyContext dbContext)
+        public CompanyService(CompanyContext dbContext, IServiceProvider serviceProvider)
         {
+            _coinService = serviceProvider.GetService<ICoinTypeSerrvice>();
             _repo = new CompanyRepo(dbContext);
         }
 
@@ -37,9 +43,20 @@ namespace Domain
             return _repo.GetAll().AsEnumerable();
         }
 
-        public IEnumerable<Company> GetAllNoLazyLoad()
+        public async Task<IEnumerable<Company>> GetAllNoLazyLoad()
         {
-            return _repo.GetAllNoLazyLoad().AsEnumerable();
+            var results = _repo.GetAllNoLazyLoad().AsEnumerable();
+            foreach (var item in results)
+            {
+                var dataBid = new DateTime(int.Parse(item.CurrentRootCoinValues.timestamp));
+                
+                if ((dataBid - DateTime.Now).TotalHours > 20)
+                {
+                    var coins = await _coinService.Get();
+                    dynamic jsonResponse = JsonConvert.DeserializeObject<RootCoin>(coins);
+                }
+            }
+            return results;
         }
     }
 }

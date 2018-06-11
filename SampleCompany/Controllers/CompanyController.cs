@@ -24,9 +24,9 @@ namespace SampleCompany.Controllers
 
         // GET: api/Company
         [HttpGet]
-        public IEnumerable<Company> Get()
+        public async Task<IEnumerable<Company>> Get()
         {
-            return _service.GetAllNoLazyLoad();
+            return await _service.GetAllNoLazyLoad();
         }
 
         // GET: api/Company/5

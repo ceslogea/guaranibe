@@ -37,9 +37,9 @@ namespace SampleCompany.Infra
         {
             var code = HttpStatusCode.InternalServerError; // 500 if unexpected
 
-            if (exception is ArgumentNullException) code = HttpStatusCode.OK;
+            if (exception is ArgumentNullException) code = HttpStatusCode.InternalServerError;
             //else if (exception is MyUnauthorizedException) code = HttpStatusCode.Unauthorized;
-            else if (exception is Exception) code = HttpStatusCode.OK;
+            else if (exception is Exception) code = HttpStatusCode.InternalServerError;
 
             var result = JsonConvert.SerializeObject(new { error = exception.Message });
             context.Response.ContentType = "application/json";
