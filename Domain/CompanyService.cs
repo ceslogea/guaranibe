@@ -45,23 +45,34 @@ namespace Domain
 
         public async Task<IEnumerable<Company>> GetAllNoLazyLoad()
         {
+            var alreadyUpdatedFromWS = false;
             var results = _repo.GetAllNoLazyLoad().ToList();
             foreach (var item in results)
-            {
-                var dataBid = GetDateTimeFromUnixTimeStamp(uint.Parse(item.CurrentRootCoinValues.timestamp));
-                
-                if ((dataBid - DateTime.Now).TotalHours > 20)
+                if ((DateTime.Now - item.CurrentRootCoinValues.LastModifiedDate).TotalMinutes > 20)
                 {
-                    var coins = await _coinService.Get();
-                    dynamic jsonResponse = JsonConvert.DeserializeObject<RootCoin>(coins);
+                    alreadyUpdatedFromWS = await UpdateOnceFromWebService(alreadyUpdatedFromWS);
+                    await UpdateCoinStatus(item);
                 }
-            }
+
             return results;
         }
 
-        public DateTime GetDateTimeFromUnixTimeStamp(uint timestamp)
+        private async Task<bool> UpdateOnceFromWebService(bool alreadyUpdatedFromWS)
         {
-            return new DateTime(1970, 1, 1, 0, 0, 0).AddSeconds(timestamp);
+            if (!alreadyUpdatedFromWS)
+            {
+                await _coinService.Get();
+                alreadyUpdatedFromWS = true;
+            }
+
+            return alreadyUpdatedFromWS;
         }
+
+        private async Task UpdateCoinStatus(Company item)
+        {
+            var coins = await _coinService.GetCoins();
+            item.CurrentRootCoinValues = coins.GetType().GetProperty(item.CurrentRootCoinValues.code).GetValue(coins) as RootCoinValues;
+        }
+
     }
 }

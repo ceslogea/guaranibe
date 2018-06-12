@@ -18,26 +18,6 @@ c:\users\celsogea\documents\visual studio 2017\Projects\SampleCompany\XUnitTesst
 c:\users\celsogea\documents\visual studio 2017\Projects\SampleCompany\XUnitTesstCompany\bin\Debug\netcoreapp2.0\Models.pdb
 c:\users\celsogea\documents\visual studio 2017\Projects\SampleCompany\XUnitTesstCompany\obj\Debug\netcoreapp2.0\XUnitTesstCompany.dll
 c:\users\celsogea\documents\visual studio 2017\Projects\SampleCompany\XUnitTesstCompany\obj\Debug\netcoreapp2.0\XUnitTesstCompany.pdb
-C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
-C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
-C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
-C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\XUnitTesstCompany.deps.json
-C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\XUnitTesstCompany.runtimeconfig.json
-C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\XUnitTesstCompany.runtimeconfig.dev.json
-C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\XUnitTesstCompany.dll
-C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\XUnitTesstCompany.pdb
-C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\Domain.dll
-C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\Models.dll
-C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\Repository.dll
-C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\Domain.pdb
-C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\Repository.pdb
-C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\Models.pdb
-C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\obj\Debug\netcoreapp2.0\XUnitTesstCompany.csprojResolveAssemblyReference.cache
-C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\obj\Debug\netcoreapp2.0\XUnitTesstCompany.csproj.CoreCompileInputs.cache
-C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\obj\Debug\netcoreapp2.0\XUnitTesstCompany.AssemblyInfoInputs.cache
-C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\obj\Debug\netcoreapp2.0\XUnitTesstCompany.AssemblyInfo.cs
-C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\obj\Debug\netcoreapp2.0\XUnitTesstCompany.dll
-C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\obj\Debug\netcoreapp2.0\XUnitTesstCompany.pdb
 C:\Users\celso.bernar\Source\Repos\guaranibe\XUnitTesstCompany\obj\Debug\netcoreapp2.0\XUnitTesstCompany.csprojResolveAssemblyReference.cache
 C:\Users\celso.bernar\Source\Repos\guaranibe\XUnitTesstCompany\obj\Debug\netcoreapp2.0\XUnitTesstCompany.csproj.CoreCompileInputs.cache
 C:\Users\celso.bernar\Source\Repos\guaranibe\XUnitTesstCompany\obj\Debug\netcoreapp2.0\XUnitTesstCompany.AssemblyInfoInputs.cache
@@ -59,3 +39,23 @@ C:\Users\celso.bernar\Source\Repos\guaranibe\XUnitTesstCompany\bin\Debug\netcore
 C:\Users\celso.bernar\Source\Repos\guaranibe\XUnitTesstCompany\bin\Debug\netcoreapp2.0\Repository.pdb
 C:\Users\celso.bernar\Source\Repos\guaranibe\XUnitTesstCompany\bin\Debug\netcoreapp2.0\Models.pdb
 C:\Users\celso.bernar\Source\Repos\guaranibe\XUnitTesstCompany\obj\Debug\netcoreapp2.0\XUnitTesstCompany.csproj.CopyComplete
+C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\XUnitTesstCompany.deps.json
+C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\XUnitTesstCompany.runtimeconfig.json
+C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\XUnitTesstCompany.runtimeconfig.dev.json
+C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\XUnitTesstCompany.dll
+C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\XUnitTesstCompany.pdb
+C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\Domain.dll
+C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\Models.dll
+C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\Repository.dll
+C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\Domain.pdb
+C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\Repository.pdb
+C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\bin\Debug\netcoreapp2.0\Models.pdb
+C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\obj\Debug\netcoreapp2.0\XUnitTesstCompany.csprojResolveAssemblyReference.cache
+C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\obj\Debug\netcoreapp2.0\XUnitTesstCompany.csproj.CoreCompileInputs.cache
+C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\obj\Debug\netcoreapp2.0\XUnitTesstCompany.AssemblyInfoInputs.cache
+C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\obj\Debug\netcoreapp2.0\XUnitTesstCompany.AssemblyInfo.cs
+C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\obj\Debug\netcoreapp2.0\XUnitTesstCompany.dll
+C:\Users\Celsogea\Source\Repos\guaranibe2\XUnitTesstCompany\obj\Debug\netcoreapp2.0\XUnitTesstCompany.pdb

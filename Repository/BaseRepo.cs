@@ -20,6 +20,7 @@ namespace Repository
 
         public async Task<TEntity> Create(TEntity entity)
         {
+            entity.LastModifiedDate = DateTime.Now;
             _dbContext.Add(entity);
             await _dbContext.SaveChangesAsync();
             return entity;
@@ -47,6 +48,7 @@ namespace Repository
             if (entity == null)
                 throw new ArgumentNullException(nameof(entity));
 
+            entity.LastModifiedDate = DateTime.Now;
             _dbContext.Update(entity);
             await _dbContext.SaveChangesAsync();
 

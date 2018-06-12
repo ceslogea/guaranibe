@@ -10,5 +10,6 @@ namespace Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
+        public DateTime LastModifiedDate { get; set; }
     }
 }
