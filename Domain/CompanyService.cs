@@ -18,9 +18,9 @@ namespace Domain
         private ICompanyRepo _repo;
         public IConfiguration Configuration { get; }
 
-        public CompanyService(CompanyContext dbContext, IServiceProvider serviceProvider)
+        public CompanyService(CompanyContext dbContext, ICoinTypeSerrvice coinService)
         {
-            _coinService = serviceProvider.GetService<ICoinTypeSerrvice>();
+            _coinService = coinService;
             _repo = new CompanyRepo(dbContext);
         }
 

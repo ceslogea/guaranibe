@@ -46,9 +46,9 @@ namespace XUnitTesstCompany
 }";
         private IServiceProvider _serviceProvider;
 
-        public CompanyDomainTest(IServiceProvider serviceProvider)
+        public CompanyDomainTest()
         {
-           _serviceProvider = serviceProvider;
+           //_serviceProvider = serviceProvider;
     }
 
         #region OK
@@ -66,7 +66,7 @@ namespace XUnitTesstCompany
             using (CompanyContext context = new CompanyContext(options))
             {
                 context.Database.EnsureCreated();
-                var service = new CompanyService(context, _serviceProvider);
+                var service = new CompanyService(context, new CoinTypeService(context));
                 var company1 = JsonConvert.DeserializeObject<Company>(_JSON);
                 company1 = await service.Add(company1);
                 List<Company> result = service.GetAll().ToList();
@@ -89,7 +89,7 @@ namespace XUnitTesstCompany
             using (CompanyContext context = new CompanyContext(options))
             {
                 context.Database.EnsureCreated();
-                var service = new CompanyService(context, _serviceProvider);
+                var service = new CompanyService(context, new CoinTypeService(context));
                 var company1 = JsonConvert.DeserializeObject<Company>(_JSON);
                 var company2 = JsonConvert.DeserializeObject<Company>(_JSON);
                 Company newCompany = await service.Add(company1);
@@ -118,7 +118,7 @@ namespace XUnitTesstCompany
             using (CompanyContext context = new CompanyContext(options))
             {
                 context.Database.EnsureCreated();
-                var service = new CompanyService(context, _serviceProvider);
+                var service = new CompanyService(context, new CoinTypeService(context));
                 Exception ex = await Assert.ThrowsAnyAsync<Exception>(() => service.Add(newCompany));
             }
 
@@ -138,7 +138,7 @@ namespace XUnitTesstCompany
             using (CompanyContext context = new CompanyContext(options))
             {
                 context.Database.EnsureCreated();
-                var service = new CompanyService(context, _serviceProvider);
+                var service = new CompanyService(context, new CoinTypeService(context));
                 Exception ex = await Assert.ThrowsAnyAsync<Exception>(() => service.Add(newCompany));
             }
         }
@@ -159,7 +159,7 @@ namespace XUnitTesstCompany
             using (CompanyContext context = new CompanyContext(options))
             {
                 context.Database.EnsureCreated();
-                var service = new CompanyService(context, _serviceProvider);
+                var service = new CompanyService(context, new CoinTypeService(context));
                 Exception ex = await Assert.ThrowsAnyAsync<Exception>(() => service.Add(newCompany));
             }
         }
@@ -178,7 +178,7 @@ namespace XUnitTesstCompany
             using (CompanyContext context = new CompanyContext(options))
             {
                 context.Database.EnsureCreated();
-                var service = new CompanyService(context, _serviceProvider);
+                var service = new CompanyService(context, new CoinTypeService(context));
                 Exception ex = await Assert.ThrowsAnyAsync<Exception>(() => service.Add(newCompany));
             }
         }
